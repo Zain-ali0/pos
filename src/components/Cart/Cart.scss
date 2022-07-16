@@ -1,0 +1,171 @@
+.Cart-box 
+
+{
+    background: var(--white-color);
+    border-radius: 10px;
+
+
+
+    .option
+    {
+        display: flex;
+        justify-content: space-between;
+        margin: 0 5px;
+        margin-top: 20px;
+
+
+        button 
+        {
+            background: var(--white-color);
+            border: 1px solid red;
+            align-items: center;
+            width: 40%;
+            font-size: 15px;
+            cursor: pointer;
+            border-radius: 10px;
+            margin-right: 5px;
+        }
+        
+        select 
+        {
+            width: 60%;
+            direction: rtl;
+            border: 1px solid var(--gray-color);
+            border-radius: 10px;
+            padding: 5px;
+            margin-right: 10px;
+            cursor: pointer;
+        }
+
+    }
+
+    .order 
+    {
+        direction: rtl;
+        margin: 10px;
+        height: 70%;
+        overflow-y: scroll;
+        margin-top: 20px;
+
+
+        .row 
+        {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom: 1px solid var(--gray-color);
+
+            .calc
+            {
+                display: flex;
+                align-items: center;
+
+                div 
+                {
+                    display: flex;
+                    text-align: center;
+                    margin-left: 6px;
+
+                    .plus 
+                    {
+                        background: var(--green-color);
+                        width: 20px;
+
+                        cursor: pointer;
+                    }
+                    
+                    .num
+                    {
+                        background: var(--white-color);
+                        width: 20px;
+
+                        cursor: pointer;
+                    }
+                    
+                    .minus
+                    {
+                        background: #f0f0f0;
+                        width: 20px;
+                        cursor: pointer;
+                    }
+                }
+                .del 
+                {
+                    color: var(--green-color);
+                    font-size: 20px;
+                    cursor: pointer;
+                }
+            }
+        }
+
+        &::-webkit-scrollbar {
+            width: 10px;
+        }
+
+        &::-webkit-scrollbar-thumb {
+            background: #f0f0f0;
+            border-radius: 20px;
+        }
+    }
+
+    .calculations
+
+    {
+        
+        direction: rtl;
+        .note 
+        {
+            background: var(--green-color);
+            width: 40%;
+            text-align: center;
+            margin-right: 270px;
+            border-radius: 7px;
+            color: var(--white-color);
+            cursor: pointer;
+            
+        }
+
+        .sum
+        {
+            margin-right: 10px;
+        }
+
+        .buttons
+        {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            direction: rtl;
+            margin-top: 20px;
+            text-align: center;
+            
+            .save 
+            {
+                background: var(--green-color);
+                color: var(--white-color);
+                width: 30%;
+                margin-right: 10px;
+                border-radius: 8px;
+                cursor: pointer;
+            }   
+            .dis
+            {
+                background: var(--white-color);
+                color: var(--green-color);
+                border: 1px solid var(--green-color);
+                width: 30%;
+                border-radius: 8px;
+                cursor: pointer;
+            }
+            .back 
+            {
+                background: var(--gray-color);
+                width: 30%;
+                margin-left: 10px;
+                border-radius: 8px;
+                cursor: pointer;
+            }
+        }
+    }
+
+}

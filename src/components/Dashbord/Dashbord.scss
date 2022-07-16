@@ -1,0 +1,243 @@
+.dash-container {
+    direction: rtl;
+    display: flex;
+    flex-direction: column;
+}
+
+.search {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+
+    input {
+        border: 1px solid var(--gray-color);
+        border-radius: 10px;
+        width: 100%;
+        height: 40px;
+        padding: 10px;
+        font-size: 16px;
+
+        &:focus {
+            border: 1px solid var(--green-color);
+        }
+    }
+
+    .logo {
+        width: 60px;
+        height: 60px;
+
+        img {
+            width: 100%;
+            object-fit: cover;
+        }
+    }
+}
+
+.items {
+    background: var(--white-color);
+    border-radius: 10px;
+    margin: 0 10px 10px 0;
+    height: 100%;
+    width: 100%;
+
+
+    .slider {
+        overflow-x: scroll;
+        overflow-y: hidden;
+        display: grid;
+        grid-template-columns: repeat(23, 1fr);
+        margin: 7px;
+
+        &::-webkit-scrollbar {
+            height: 10px;
+        }
+
+        &::-webkit-scrollbar-thumb {
+            background: #f0f0f0;
+            border-radius: 20px;
+        }
+
+        .btn {
+            width: 150px;
+            height: 90%;
+            margin: 4px;
+            border-radius: 5px;
+            background: #828486;
+            color: var(--white-color);
+            font-weight: 700;
+            font-size: 15px;
+            cursor: pointer;
+
+            
+
+
+            
+            @media screen and (max-width:1024px) {
+                width: 100px;
+            }
+
+        }
+        .item-active {
+            border: 1px solid var(--green-color);
+            color: var(--black-color);
+            background: var(--white-color);
+        }
+
+
+
+    }
+
+    .product
+    {
+
+        width: 97.6%;
+        height: 84%;
+        margin: 10px;
+        display: flex;
+        flex-wrap: wrap;
+        overflow-y: auto;
+
+        @media screen and (max-width:1024px) {
+            width: 96%;
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+        }
+        
+            .box
+            {
+                cursor: pointer;
+                margin: 3px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+                border-radius: 10px;
+                border: 1px solid #f0f0f0;
+                width: 140px;
+                height: 250px;
+                text-align: center;
+
+                @media screen and (max-width:1024px) {
+                    width: 130px;
+                    height: 250px;
+                }
+                h3 
+                {
+                    margin-top: 20px;
+                    width: 120px;
+                    height: 90px;
+
+                    font-size: 20px;
+                    font-weight: 300;
+                }
+                .price 
+                {
+                    margin-top: 20px;
+                }
+                .placesave
+                {
+                    display: flex;
+                    align-items: center;
+                    border: 2px solid #f0f0f0;
+                    border-radius: 9px;
+                    padding: 5px;
+                    margin-top: 30px;
+                    
+                    p 
+                    {
+                        margin-left: 20px;
+                    }
+                    ion-icon 
+                    {
+                        color: var(--green-color);
+                        font-size: 20px;
+                        
+                    }
+                }
+            }
+
+
+
+        &::-webkit-scrollbar {
+            width: 10px;
+        } 
+
+        &::-webkit-scrollbar-thumb {
+            background: #f0f0f0;
+            border-radius: 20px;
+        }
+    }
+
+    
+}
+
+.settings
+{
+    display: flex;
+    margin-right: 20px;
+
+    
+
+    .user 
+    {
+        display: flex;
+        align-items: center;
+        color: var(--green-color);
+        background: var(--white-color);
+        width: 70px;
+        margin: 10px;
+        font-size: 20px;
+        padding: 10px;
+        border-radius: 8px;
+        cursor: pointer;
+
+        .logout 
+        {
+            position: absolute;
+            bottom: 90px;
+            background: var(--white-color);
+            display: flex;
+            flex-direction: column;
+            width: 200px;
+            height: 100px;
+            box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+            border-radius: 6px;
+
+            button 
+            {
+                background: var(--green-color);
+                font-size: 20px;
+                color: var(--white-color);
+                border-radius: 6px;
+                height: 50px;
+                cursor: pointer;
+
+                &:hover 
+                {
+                    background: var(--gray-color);
+                    color: var(--green-color);
+                }
+            }
+
+            p
+            {
+                text-align: center;
+                font-size: 30px;
+                cursor: pointer;
+            }
+        }
+    }
+    .sett
+    {
+        display: flex;
+        align-items: center;
+        color: var(--green-color);
+        background: var(--white-color);
+        border-radius: 8px;
+        margin: 10px;
+        font-size: 20px;
+        padding: 10px;
+        cursor: pointer;
+    }
+}
