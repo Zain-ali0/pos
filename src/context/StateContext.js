@@ -1,4 +1,4 @@
-import React, { createContext, useContext, useState, useEffect  } from 'react';
+import React, { createContext, useContext, useState, useEffect } from 'react';
 import SanityClient from "../client";
 
 const Context = createContext();
@@ -13,10 +13,17 @@ export const StateContext = ({ children }) => {
     const [filterProducts, setFilterProducts] = useState([]);
     const [activeFilter, setActiveFilter] = useState('الكل');
     const [cartItems, setCartItems] = useState([]);
-    const [searchTerm , setSearchTerm] = useState('');
-    const [toggle , setToggle] = useState(false);
+    const [searchTerm, setSearchTerm] = useState('');
+    const [toggle, setToggle] = useState(false);
+    const [custmer, setCustmer] = useState([]);
+    const [note, setNote] = useState(false);
+    const [showButtonNote, setShowButtonNote] = useState(false);
+    const [selectVlaue, setSlectValue] = useState();
+    const [noteVlaue, setNoteVlaue] = useState();
 
-    
+
+
+
 
     const logout = () => {
         localStorage.clear();
@@ -25,9 +32,18 @@ export const StateContext = ({ children }) => {
     }
     useEffect(() => {
         const query = '*[_type == "Products"]';
+
         SanityClient.fetch(query).then((data) => {
             setFilterProducts(data);
             setProducts(data)
+        });
+    }, []);
+
+    useEffect(() => {
+        const query = '*[_type == "Custmer"]';
+
+        SanityClient.fetch(query).then((data) => {
+            setCustmer(data)
         });
     }, []);
 
@@ -55,7 +71,7 @@ export const StateContext = ({ children }) => {
     }
 
     const TotalPrice = cartItems.reduce((price, item) => price + item.quantity * item.price, 0)
-    
+
     const onDecrease = (product) => {
         const ProductExite = cartItems.find((item) => item?._id === product?._id);
         if (ProductExite.quantity > 1) {
@@ -65,7 +81,7 @@ export const StateContext = ({ children }) => {
 
     const DeleteProduct = (product) => {
         const ProductExite = cartItems.find((item) => item?._id === product?._id);
-        if(ProductExite.quantity >= 1){
+        if (ProductExite.quantity >= 1) {
             setCartItems(cartItems.filter((item) => item?._id !== product?._id))
         }
     }
@@ -92,6 +108,15 @@ export const StateContext = ({ children }) => {
                 logout,
                 toggle,
                 setToggle,
+                custmer,
+                note,
+                setNote,
+                showButtonNote,
+                setShowButtonNote,
+                selectVlaue,
+                setSlectValue,
+                setNoteVlaue,
+                noteVlaue
 
             }}
         >

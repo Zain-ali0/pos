@@ -1,7 +1,11 @@
+
+
+
 import React from 'react';
 import "./App.scss";
 import { Dashbord, Cart, Login } from './components';
 import { StateContext } from "./context/StateContext";
+
 
 
 const App = () => {
@@ -10,7 +14,9 @@ const App = () => {
     const getPassword = localStorage.getItem('password');
 
     return (
-        <>
+
+        
+         <>     
             { getuser&&getPassword?
                 <StateContext>
                     <div className='app-container'>
@@ -21,8 +27,13 @@ const App = () => {
                 : <Login/>
             }
         </>
-
     )
 }
 
-export default App
+export default App;
+
+
+
+
+
+

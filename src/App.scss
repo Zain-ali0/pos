@@ -39,4 +39,16 @@ body
     @media screen and (max-width:1024px) {
         grid-template-columns: 40% 60%;
     }
+
+    @media screen  {
+        .cart-container
+        {
+            display: none;
+        }
+    }
+    
 }
+
+
+
+

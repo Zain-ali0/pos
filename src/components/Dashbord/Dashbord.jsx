@@ -3,11 +3,8 @@ import "./Dashbord.scss";
 import img from "../../image/img-removebg-preview.png";
 import { useStateContext } from "../../context/StateContext";
 
-
 const Dashbord = () => {
-
-    const { category, filterProducts, activeFilter, Filter, onAdd, searchTerm, setSearchTerm, logout, toggle, setToggle, } = useStateContext()
-
+    const { category, filterProducts, activeFilter, Filter, onAdd, searchTerm, setSearchTerm, logout, toggle, setToggle } = useStateContext()
     return (
         <div className='dash-container'>
             <div className='search'>
@@ -26,6 +23,7 @@ const Dashbord = () => {
                     ))}
                 </div>
                 <div className='product' >
+
                     {filterProducts.filter((val) => {
                         if (searchTerm === '') {
                             return val;
@@ -33,10 +31,7 @@ const Dashbord = () => {
                             return val;
                         }
                     }).map((product, index) => (
-                        <div className="box"
-                            key={index}
-                            onClick={() => onAdd(product)}
-                        >
+                        <div className="box" key={index} onClick={() => onAdd(product)}>
                             <h3>{product.item}</h3>
                             <p className="price">{product.price} د.ع</p>
                             <div className='placesave'>
@@ -45,6 +40,7 @@ const Dashbord = () => {
                             </div>
                         </div>
                     ))}
+
                 </div>
             </div>
             <div className='settings'>
@@ -53,7 +49,7 @@ const Dashbord = () => {
                     <ion-icon name="person-outline"></ion-icon>
                     {toggle && (
                         <div className='logout'>
-                            <button>تسجيل خروج</button>
+                            <button onClick={logout}>تسجيل خروج</button>
                             <p onClick={() => setToggle(false)}><ion-icon name="close-circle-outline"></ion-icon></p>
                         </div>
                     )}
@@ -63,10 +59,7 @@ const Dashbord = () => {
                     <ion-icon name="settings-outline"></ion-icon>
                 </div>
             </div>
-
         </div>
-
     )
-
 }
 export default Dashbord;

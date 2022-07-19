@@ -1,0 +1,36 @@
+.print {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    direction: rtl;
+
+    .img {
+        width: 250px;
+        height: 250px;
+
+
+        img {
+            width: 100%;
+        }
+    }
+
+    .det {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    table {
+        background: #000;
+        margin-top: 10px;
+        width: 80%;
+
+        tr {
+            background: #fff;
+            text-align: center;
+        }
+    }
+}
