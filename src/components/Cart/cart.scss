@@ -1,0 +1,175 @@
+.cart
+{
+    background: var(--white-color);
+    width: 30%;
+    margin: 20px 0 20px 20px;
+    border-radius: 5px;
+
+    .option 
+    {
+        border: 1px solid var(--primary-color);
+        height: 40px;
+        margin: 5px;
+        border-radius: 5px;
+
+        select 
+        {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    .cart-order
+    {
+        margin: 10px;
+        height: 100%;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+
+
+        .order 
+        {
+            height: 60%;
+            overflow-y: scroll;
+
+            &::-webkit-scrollbar {
+                width: 7px;
+            }
+    
+            &::-webkit-scrollbar-thumb {
+                background: var(--primary-color);
+                border-radius: 20px;
+            }
+
+            .inner-order 
+            {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                border-bottom: 1px solid var(--gray-color);
+                width: 98%;
+
+                .qty
+                {
+                    display: flex;
+                    align-items: center;
+                    cursor: pointer;
+
+                    .oper 
+                    {
+                        display: flex;
+                        align-items: center;
+                        text-align: center;
+                        margin: 5px;
+
+                        .inc
+                        {
+                            background: var(--primary-color);
+                            width: 30px;
+                            height: 30px;
+                            font-size: 17px;
+                            color: var(--white-color);
+                            border-bottom-right-radius: 10px;
+                            border-top-right-radius: 10px;
+                        }
+                        .num
+                        {
+                            width: 30px;
+                        }
+                        .dec
+                        {
+                            background: var(--primary-color);
+                            width: 30px;
+                            height: 30px;
+                            font-size: 17px;
+                            color: var(--white-color);
+                            border-bottom-left-radius: 10px;
+                            border-top-left-radius: 10px;
+                        }
+                    }
+
+                    svg 
+                    {
+                        font-size: 20px;
+                        color:var(--secondary-color);
+                    }
+                }
+            }
+        }
+
+        .cart-opertion 
+        
+        {
+            height: 38%;
+            h1 
+            {
+                background: var(--primary-color);
+                border-radius: 5px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+            }
+
+            .tool 
+            {
+                flex-direction: column;
+            }
+
+            .tools 
+            {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+
+                button 
+                {
+                    width: 100%;
+                    margin: 5px;
+                    border-radius: 5px;
+                    background: var(--gray-color);
+                    color: var(--primary-color);
+                    font-size: 15px;
+                    padding: 5px;
+                    cursor: pointer;
+                }
+
+            }
+
+            .tool 
+            {
+                padding: 3px;
+                direction: ltr;
+
+                div 
+                {
+                    margin: 5px;
+
+                    input 
+                    {
+                        border: 1px solid var(--gray-color);
+                        width: 70%;
+                        height: 30px;
+                        direction: rtl;
+                        padding: 3px;
+                        border-top-left-radius: 5px;
+                        border-bottom-left-radius: 5px;
+                    }
+    
+                    button
+                    {
+                        background: var(--gray-color);
+                        color: var(--primary-color);
+                        width: 30%;
+                        height: 30px;
+                        border-top-right-radius: 5px;
+                        border-bottom-right-radius: 5px;
+                    }
+                }
+
+
+            }
+        }
+    }
+}

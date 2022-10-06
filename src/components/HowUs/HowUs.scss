@@ -1,0 +1,169 @@
+.us-container {
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    position: absolute;
+        
+    right: 300px;
+    bottom: 20px;
+
+    @media screen and (max-width:1024px) {
+        right: 30px;
+    }
+
+
+
+    .inner-container {
+        border: 1px solid var(--primary-color);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 1000px;
+        height: 70%;
+        background: var(--white-color);
+        border-radius: 10px;
+        padding: 10px;
+        direction: ltr;
+        box-shadow: var(--box-shadow);
+
+        
+    @media screen and (max-width:1024px) {
+        width:900px;
+    }
+
+
+    .close 
+{
+
+        position: absolute;
+        right: 0;
+        top: 120px;
+        cursor: pointer;
+
+
+
+        &:hover 
+        {
+            color: var(--secondary-color);
+        }
+    }
+
+    }
+
+    .us-img {
+
+        height: 660px;
+        width: 500px;
+
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-end;
+        position: relative;
+
+        img {
+            width: 100%;
+            object-fit: contain;
+            z-index: 1;
+        }
+
+        .overlay_circle {
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: 0;
+            width: 100%;
+            height: 90%;
+        }
+    }
+
+
+    .us-details
+    {
+        
+
+        .iden 
+        {
+            .name 
+            {
+                h1
+                {
+                    color: var(--primary-color);
+                    font-weight: 500;
+                    font-size: 50px;
+                }
+            }
+
+            .work
+            {
+                background: var(--gray-color);
+                width: 98%;
+                height: 86px;
+                margin: 5px;
+                padding: 5px;
+                border-radius: 5px;
+                color: var(--white-color);
+            }
+        }
+
+        
+    }
+
+    .contact 
+    {
+        margin-top: 20px;
+
+        .protofolio
+        {
+            display: flex;
+            font-size: 20px;
+
+            p 
+            {
+                display: flex;
+                align-items: center;
+
+                svg 
+                {
+                    margin-left: 5px;
+                }
+            }
+
+            a 
+            {
+                color: var(--primary-color);
+            }
+        }
+
+        h1 
+        {
+            span 
+            {
+                color: var(--primary-color);
+            }
+        }
+
+        .icon 
+        {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 10px;
+
+            svg 
+            {
+                margin: 5px;
+                font-size: 25px;
+                color: var(--primary-color);
+
+                &:hover 
+                {
+                    transform: rotate(365deg);
+                }
+            }
+        }
+    }
+    
+}

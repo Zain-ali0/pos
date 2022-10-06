@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Changa:wght@200;300;400;500;600;700&family=Poppins:ital,wght@0,400;1,200;1,300;1,500;1,600;1,700&display=swap');
+
+
+:root 
+{
+    --primary-color:#99B898;
+    --secondary-color:#117A65;
+    --balck-color:#000;
+    --white-color:#fff;
+    --gray-color:#333;
+    --box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+* 
+{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    border: 0;
+    text-decoration: none;
+    outline: none;
+    box-sizing: border-box;
+    font-family: 'Changa', sans-serif;
+    overflow: hidden;
+
+}
+
+body 
+{
+    background:#f0f0f0;
+}
+
+.container 
+{
+    display: flex;
+    height: 100vh;
+    direction: rtl;
+}
+

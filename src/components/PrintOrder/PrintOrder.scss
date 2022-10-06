@@ -1,0 +1,61 @@
+.print-container
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    direction: rtl;
+    width: 100%;
+
+    @media screen {
+        display: none;
+    }
+
+    .logo
+    {
+        margin-bottom: 50px;
+        h1 
+        {
+            color: var(--primary-color);
+        }
+    }
+
+    .details
+    {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 80%;
+        margin: 5px;
+    }
+    
+    table 
+    {
+        width: 80%;
+        margin-top: 30px;
+        background: var(--balck-color);
+
+        tr 
+        {
+            text-align: center;
+        td
+        {
+            background: var(--white-color);
+        }
+        }
+    }
+
+    .sub 
+    {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        width: 80%;
+
+        p 
+        {
+            margin: 10px;
+        }
+    }
+}
